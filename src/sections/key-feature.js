@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from '../components/section-header';
+import FeatureCard from 'components/feature-card';
 import FeatureCardColumn from 'components/feature-card-column.js';
 import Performance from 'assets/key-feature/performance.svg';
 import Partnership from 'assets/key-feature/partnership.svg';
@@ -15,7 +16,7 @@ const data = [
     altText: 'Fast Performance',
     title: 'Fast Performance',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Get your products within a week.',
   },
   {
     id: 2,
@@ -23,7 +24,7 @@ const data = [
     altText: 'Partnership deal',
     title: 'Partnership deal',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Choose the best deal for you.',
   },
   {
     id: 3,
@@ -31,7 +32,7 @@ const data = [
     altText: 'Pro Subscription',
     title: 'Pro Subscription',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Become a member with a Pro Subscription.',
   },
   {
     id: 4,
@@ -39,13 +40,32 @@ const data = [
     altText: 'Customer Support',
     title: 'Customer Support',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'If you have any suggestions contact us any time.',
   },
 ];
 
 export default function KeyFeature() {
   return (
-		<h1>Key-feature</h1>
+		<section sx={{ variant: 'section.keyFeature' }} id="feature">
+			<Container>
+				<SectionHeader 
+					slogan="What's the function"
+					title="Meet the feature of our product"
+					/>
+
+					<Grid sx={styles.grid}>
+						{data.map((item) => (
+							<FeatureCardColumn
+								key={item.id}
+								src={item.imgSrc}
+								alt={item.altText}
+								title={item.title}
+								text={item.text}
+							/>
+						))}
+					</Grid>
+			</Container>
+		</section>
   );
 }
 

@@ -17,7 +17,7 @@ export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
         <Layout>
-          <SEO title="Startup Landing 005" />
+          <SEO title="Startup" />
           <Banner />
           <KeyFeature />
           <ServiceSection />
