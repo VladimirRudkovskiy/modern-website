@@ -31,7 +31,7 @@ const data = [
     altText: 'Partnership deal',
     title: 'Partnership deal',
     text:
-      'Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.',
+      'Only best deals for you and your company',
   },
   {
     id: 4,
@@ -39,13 +39,31 @@ const data = [
     altText: 'Customer Support',
     title: 'Customer Support',
     text:
-      'We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.',
+      'Contact us any time about new projects and deals',
   },
 ];
 
 export default function Feature() {
   return (
-		<h1>Feature</h1>
+		<section sx={{ variant: 'section.feature'}}>
+			<Container>
+				<SectionHeader 
+				slogan ="Quality Features"
+				title= "Amazing useful features"
+				/>
+				<Grid sx={styles.grid}>
+					{data.map((item) => (
+						<FeatureCard 
+							key={item.id}
+							src={item.imgSrc}
+							alt={item.altText}
+							title={item.title}
+							text={item.text}
+						/>
+					))}
+				</Grid>
+			</Container>
+		</section>
   );
 }
 

@@ -10,14 +10,32 @@ const data = {
   subTitle: 'Core features',
   title: 'Smart Jackpots that you may love this anytime & anywhere',
   description:
-    'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.',
+    'New delas and projects for sake of your company',
   btnName: 'Get Started',
   btnURL: '#',
 };
 
 export default function CoreFeature() {
   return (
-		<h1>Core-feature</h1>
+		<section sx={{variant: 'section.coreFeature'}}>
+			<Container sx={styles.containerBox}>
+				<Box sx={styles.contentBox}>
+					<TextFeature 
+						subTitle={data.subTitle}
+						title={data.title}
+						description={data.description}
+						btnName={data.btnName}
+						btnUrl={data.btnURL}
+						/>
+				</Box>
+				<Box sx={styles.thumbnail}>
+					<Image src={FeatureThumb} alt="Thumbnail" />
+					<Box sx={styles.shapeBox}>
+						<Image src={shapePattern} alt="Shape" />
+					</Box>
+				</Box>
+			</Container>
+		</section>
   );
 }
 
